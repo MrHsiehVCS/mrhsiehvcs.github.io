@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="description" content="MrHsiehVCS.GitHub.io : ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="jquery-ui-1.12.1/jquery-ui.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/jquery.sliderTabs.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/general.css">
+    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    
+    <title>Mr Hsieh's Math Apps</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" src="favicon.ico">
+    
+    <script src="javascripts/jquery-3.3.1.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="javascripts/dnd_tristana2.js"></script>
+    <script type="text/javascript" src="javascripts/tristana_magic_index.js"></script> 
+    <script type="text/javascript" src="javascripts/roulette.js"></script> 
+    <!-- fontawesome.com -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script> -->
+    
+    
+    
+    <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    
+    <!-- <script src="jquery-ui-1.12.1/jquery-ui.js"></script> -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> -->
+    
+    <!-- <script type="text/javascript" src="javascripts/tristana_magic_index.js"></script>  -->
+    <!-- <script type="text/javascript" src="javascripts/jquery.sliderTabs.js"></script> -->
+    <!-- <script type="text/javascript" src="javascripts/dnd_tristana.js"></script> -->
+</head>
+
+<!-- <body data-spy="scroll" data-target=".nav" data-offset="50"> -->
+    <body data-spy="" data-target=".nav" data-offset="50">
+        <nav style="background-color:#000;">
+            <a href="index.html">Main Page</a> &#x2022;
+            <strong>Stats Apps</strong>
+        </nav>
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer container">
+            <header class="inner">
+                <h1 id="project_title" class="text-center">Statistics and Probability Apps</h1>
+                <!-- <h2 id="project_tagline">An attempt to make magic come alive</h2> -->
+            </header>
+        </div>
+        
+        
+        
+        
+        <!-- MAIN CONTENT -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner container">
+                <div class="row">
+                    <div id="nav-col" class="col-md-3 col-lg-2 ">
+                        
+                        <ul class="nav" role="tablist">
+                            
+                            <li class="nav-item col-3 col-sm-4 col-md-12 text-center nopadding">
+                                <a class="nav-link" data-toggle="tab" href="#MagicTab">Roulette</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="tab-content col-md-9 col-lg-10 ">
+                        
+                        
+                        <div class="tab-pane" id="MagicTab">
+                            
+                            
+                            <div class=" wrapper text-center align-items-center justify-content-center justify-content-md-center">
+                                <button class=" btn-lg btn-primary float-md-left" onclick="on_roulette_click(1)">Spin!</button>
+                                <!-- <button class=" btn-lg btn-primary float-md-left" onclick="on_roulette_click(10)">Spin 10 times!</button> -->
+                                <!-- <button class=" btn-lg btn-primary float-md-left" onclick="on_roulette_click(100)">Spin 100 times!</button> -->
+                                <div class="" style="clear:both;"></div>
+                                <div id="roll-answer-wrapper" class="border rounded">
+                                    <div class="row text-left">
+                                        <div class = "col-md">
+                                            
+                                            <div id = "roll-answer" >
+                                                Click the button to roll
+                                            </div>
+                                            <br>
+                                            
+                                            <div>
+                                                <label for="bet-amount">Bet Amount:</label>
+                                                <input type="number" id="bet-amount" name="bet-amount"
+                                                min="1" max="100" value="1" step ="1" 
+                                                oninput="this.value = clampInput(this.value, 0,100)"/>
+                                            </div>
+                                            
+                                            <br>
+                                            
+                                            <div id="bet-result-text">
+                                                Good luck! :)
+                                                <br>    
+                                                <br>
+                                                <br>    
+                                            </div>
+                                            <br>
+                                            
+                                            <div id="money" > 
+                                                Total Bets: 0
+                                                <br>
+                                                Earnings: 0
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            
+                                            select your bet:    
+                                            <div id="bet-selection" class="">
+                                                <input type="radio" name="bet-selection" value="red" checked />
+                                                <label for="red"> <span style="color:#f00">red</span> (x2)</label>
+                                                <br>
+                                                
+                                                <input type="radio" name="bet-selection" value="black" />
+                                                <label for="black">black (x2)</label>
+                                                
+                                                <br>
+                                                <input type="radio" name="bet-selection" value="low" checked />
+                                                <label for="low"> <span>low (1-18)</span> (x2)</label>
+                                                <br>
+                                                
+                                                <input type="radio" name="bet-selection" value="high" />
+                                                <label for="high">high (19-36) (x2)</label>
+                                                
+                                                <br>
+                                                <input type="radio" name="bet-selection" value="dozen1" />
+                                                <label for="dozen1">low dozen (1-12) (x3)</label>
+                                                <br>
+                                                <input type="radio" name="bet-selection" value="dozen2" />
+                                                <label for="dozen2">mid dozen (13-24) (x3)</label>
+                                                <br>
+                                                <input type="radio" name="bet-selection" value="dozen3" />
+                                                <label for="dozen3">high dozen (25-36) (x3)</label>
+                                                
+                                                <br>
+                                                <input type="radio" name="bet-selection" value="single" />
+                                                <label for="single">Single: 
+                                                    <select name="singles" id="singles">
+                                                        <option value="00">00</option>
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
+                                                        <option value="21">21</option>
+                                                        <option value="22">22</option>
+                                                        <option value="23">23</option>
+                                                        <option value="24">24</option>
+                                                        <option value="25">25</option>
+                                                        <option value="26">26</option>
+                                                        <option value="27">27</option>
+                                                        <option value="28">28</option>
+                                                        <option value="29">29</option>
+                                                        <option value="30">30</option>
+                                                        <option value="31">31</option>
+                                                        <option value="32">32</option>
+                                                        <option value="33">33</option>
+                                                        <option value="34">34</option>
+                                                        <option value="35">35</option>
+                                                        <option value="36">36</option>
+                                                    </select>
+                                                    (x35)
+                                                </label>
+                                                
+                                                <br>
+                                                <input type="radio" name="bet-selection" value="zeroes" />
+                                                <label for="zeroes">zeroes (0 or 00) (x17)</label>
+                                                
+                                                <br>
+                                                <input type="radio" name="bet-selection" value="low3" />
+                                                <label for="low3">low 3 (1,2 or 3) (x11)</label>
+                                                <br>
+                                                <input type="radio" name="bet-selection" value="high4" />
+                                                <label for="high4">high 4 (33,34,35,36) (x8)</label>
+                                                <br>
+                                                <input type="radio" name="bet-selection" value="basket" />
+                                                <label for="basket">basket (zeroes or low 3) (x6)</label>
+                                            </div> 
+                                        </div>
+                                        
+                                        <div class="col-md">
+                                            
+                                            
+                                            <div id="roll-history" >
+                                                history here
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- END section main_content class="inner" -->
+        
+        
+        <!-- END MAIN CONTENT -->
+        <!-- FOOTER  -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <p>Copyright 2022 Mr Hsieh</p>
+            </footer>
+        </div>
+        
+        
+    </body>
+    
+    </html>
+    
