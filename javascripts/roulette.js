@@ -163,7 +163,6 @@ function betResult(result, betAmount) {
         totalBets++
         if(selectedValue == 'single') {
             var selected_single = document.getElementById('singles').value
-            console.log(selected_single, result.value)
             if(selected_single === result.value) {
                 return betAmount * 34
             }
