@@ -3,43 +3,43 @@
 var roulette_outcomes = {
     'outcomes' : [
         {'value':'00', 'color': 'green', 'colorCode': "#00aa00"},
-        {'value':0, 'color': 'green', 'colorCode': "#00aa00"},
-        {'value':01, 'color': 'black', 'colorCode': "#000000"},
-        {'value':03, 'color': 'black', 'colorCode': "#000000"},
-        {'value':05, 'color': 'black', 'colorCode': "#000000"},
-        {'value':07, 'color': 'black', 'colorCode': "#000000"},
-        {'value':09, 'color': 'black', 'colorCode': "#000000"},
-        {'value':11, 'color': 'black', 'colorCode': "#000000"},
-        {'value':13, 'color': 'black', 'colorCode': "#000000"},
-        {'value':15, 'color': 'black', 'colorCode': "#000000"},
-        {'value':17, 'color': 'black', 'colorCode': "#000000"},
-        {'value':19, 'color': 'black', 'colorCode': "#000000"},
-        {'value':21, 'color': 'black', 'colorCode': "#000000"},
-        {'value':23, 'color': 'black', 'colorCode': "#000000"},
-        {'value':25, 'color': 'black', 'colorCode': "#000000"},
-        {'value':27, 'color': 'black', 'colorCode': "#000000"},
-        {'value':29, 'color': 'black', 'colorCode': "#000000"},
-        {'value':31, 'color': 'black', 'colorCode': "#000000"},
-        {'value':33, 'color': 'black', 'colorCode': "#000000"},
-        {'value':35, 'color': 'black', 'colorCode': "#000000"},
-        {'value':02, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':04, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':06, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':08, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':10, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':12, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':14, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':16, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':18, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':20, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':22, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':24, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':26, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':28, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':30, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':32, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':34, 'color': 'red', 'colorCode': "#ff0000"},
-        {'value':36, 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'0', 'color': 'green', 'colorCode': "#00aa00"},
+        {'value':'01', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'03', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'05', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'07', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'09', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'11', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'13', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'15', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'17', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'19', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'21', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'23', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'25', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'27', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'29', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'31', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'33', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'35', 'color': 'black', 'colorCode': "#000000"},
+        {'value':'02', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'04', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'06', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'08', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'10', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'12', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'14', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'16', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'18', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'20', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'22', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'24', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'26', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'28', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'30', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'32', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'34', 'color': 'red', 'colorCode': "#ff0000"},
+        {'value':'36', 'color': 'red', 'colorCode': "#ff0000"},
     ]
 }
 
@@ -47,10 +47,6 @@ const history = [
     
 ]
 var counter = {}
-for(let i = 0; i <=36; i++) {
-    counter[i] = 0
-}
-counter["00"] = 0
 
 const history_max_length = 10;
 var money = 0
@@ -98,6 +94,9 @@ function get_next_roulette_result() {
     
     var outcome = roulette_outcomes.outcomes[i];
     
+    if(!(outcome.value in counter)) {
+        counter[outcome.value] = 0
+    }
     counter[outcome.value] = Number(counter[outcome.value]) + 1
     console.log(counter)
     
@@ -136,7 +135,7 @@ function on_roulette_click_helper() {
     money += Number(deltaMoney)
     history[0]["deltaMoney"] = deltaMoney;
     document.getElementById('money').innerHTML = ("Total bets: " + totalBets + "<br>Earnings: " + money)
-    var winLostString = "won $" + (Number(deltaMoney) + Number(betAmount)) + " money back"
+    var winLostString = "won $" + (Number(deltaMoney) + Number(betAmount)) + " back"
     if(deltaMoney < 0) {
         winLostString = "lost it"
     }
@@ -164,7 +163,8 @@ function betResult(result, betAmount) {
         totalBets++
         if(selectedValue == 'single') {
             var selected_single = document.getElementById('singles').value
-            if(selected_single == result.value) {
+            console.log(selected_single, result.value)
+            if(selected_single === result.value) {
                 return betAmount * 34
             }
             else {
