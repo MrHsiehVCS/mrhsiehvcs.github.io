@@ -3,7 +3,7 @@ var tabManager = {
 
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
-
+    
     // hide all tabcontent
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -18,7 +18,7 @@ function openTab(evt, tabName) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-
+    
     // display our tab, and tablink
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
@@ -30,30 +30,30 @@ function openTab(evt, tabName) {
 }
 
 $(document).keypress(function(event){
-  var c = String.fromCharCode(event.which); 
-  
-  var tabNames = ['About', 'Character Sheet', 'Emotional Magic', 'General Magic']
-
-  var tabName = null
-  if(c == '1' 
+    var c = String.fromCharCode(event.which); 
+    
+    var tabNames = ['About', 'Character Sheet', 'Emotional Magic', 'General Magic']
+    
+    var tabName = null
+    if(c == '1' 
     || c == '2'
     || c == '3'
     || c == '4')
-  {
-    tabName = tabNames[parseInt(c)-1]
-}
-if(tabName != null)
-{
-    var tabLinks = document.getElementsByClassName("tablinks");
-    for(let tabLink of tabLinks)
     {
-        if(tabLink.innerHTML == tabName)
-        {
-            tabLink.click();
-        }
+        tabName = tabNames[parseInt(c)-1]
     }
-    //openTab();
-}
+    if(tabName != null)
+    {
+        var tabLinks = document.getElementsByClassName("tablinks");
+        for(let tabLink of tabLinks)
+        {
+            if(tabLink.innerHTML == tabName)
+            {
+                tabLink.click();
+            }
+        }
+        //openTab();
+    }
 });
 
 function add_hp(n)
@@ -85,12 +85,12 @@ function popup(event, title, str, width)
     // this line removes tags from strings ("<i>poop</i>" -> "poop")
     document.getElementById("dialog").title = "Info: " + event.currentTarget.innerHTML.replace(/(<([^>]+)>)/ig,"");
     
-
+    
     //var poop = document.getElementById("dialog").title;
     title = "Info: " + title;
     //alert(poop[0]);
     $(function(){
-
+        
         $('#dialog').dialog({title:title});
         if(width != undefined)
         {
@@ -104,7 +104,7 @@ function popup(event, title, str, width)
         $("#dialog").dialog();
         //$("#dialog").style="display:block"
         //$("#dialog").show();
-
+        
         // alert(dialogbox.innerHTML);
         // var elem = $(.)
         //alert("sup");
@@ -125,18 +125,18 @@ function constructor(){
     window.onload = init;
     function init(){
         alert(document.getElementById("main_slider_tabs").style);
-
+        
         var slider = document.getElementById("main_slider_tabs").sliderTabs({
-          autoplay:false,
-          mousewheel:false,
-          indicators:false,
-          panelArrows:false,
-          tabs:true,
-          transition:'fade',
-          classes:{
-
-          }
-      });
+            autoplay:false,
+            mousewheel:false,
+            indicators:false,
+            panelArrows:false,
+            tabs:true,
+            transition:'fade',
+            classes:{
+                
+            }
+        });
     }
 }
 
