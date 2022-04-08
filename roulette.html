@@ -23,6 +23,7 @@
     <script src="javascripts/dnd_tristana2.js"></script>
     <script type="text/javascript" src="javascripts/tristana_magic_index.js"></script> 
     <script type="text/javascript" src="javascripts/roulette.js"></script> 
+    <script type="text/javascript" src="javascripts/dice.js"></script> 
     <!-- fontawesome.com -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script> -->
@@ -67,6 +68,9 @@
                             
                             <li class="nav-item col-3 col-sm-4 col-md-12 text-center nopadding">
                                 <a class="nav-link" data-toggle="tab" href="#MagicTab">Roulette</a>
+                            </li>
+                            <li class="nav-item col-3 col-sm-4 col-md-12 text-center nopadding">
+                                <a class="nav-link" data-toggle="tab" href="#DiceTab">Dice</a>
                             </li>
                         </ul>
                     </div>
@@ -216,6 +220,16 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="DiceTab">
+                            
+                            <div class="row">
+                                
+                                <button class=" btn-lg btn-primary" onclick="on_dice_click()">Roll!</button>
+                                <div id="DiceImageDisplay" class="col">
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
