@@ -1,11 +1,11 @@
-var counter = 0;
+var diceCounter = 0;
 
 function on_dice_click() {
     var innerHTML = get_dice_image_html(getRandomInt(6)+1)
     innerHTML += get_dice_image_html(getRandomInt(6)+1)
     innerHTML += "</br>"
-    counter += 1;
-    innerHTML += "Num Rolls: " + counter
+    diceCounter += 1;
+    innerHTML += "Num Rolls: " + diceCounter
     document.getElementById('DiceImageDisplay').innerHTML = innerHTML;
 }
 
