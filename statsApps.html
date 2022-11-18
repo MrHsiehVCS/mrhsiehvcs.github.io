@@ -24,6 +24,8 @@
     <script type="text/javascript" src="javascripts/tristana_magic_index.js"></script> 
     <script type="text/javascript" src="javascripts/roulette.js"></script> 
     <script type="text/javascript" src="javascripts/dice.js"></script> 
+    <script type="text/javascript" src="javascripts/randomNumberGenerator.js"></script>
+
     <!-- fontawesome.com -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script> -->
@@ -73,6 +75,10 @@
                             <li class="nav-item col-3 col-sm-4 col-md-12 text-center nopadding">
                                 <a class="nav-link" data-toggle="tab" href="#DiceTab">Dice</a>
                             </li>
+                            <li class="nav-item col-3 col-sm-4 col-md-12 text-center nopadding">
+                                <a class="nav-link" data-toggle="tab" href="#RandomNumberGeneratorTab">Random Number Generator</a>
+                            </li>
+                            
                         </ul>
                     </div>
                     
@@ -233,6 +239,29 @@
                                 
                             </div>
                         </div>
+                        <div class="tab-pane" id="RandomNumberGeneratorTab">
+                        <div class="row">
+                            <div class="form-floating"style="padding:10px; width:100px">
+                                <input type="number" class="form-control" id="randMinInput" value="1">
+                                <label for="floatingInput">min</label>
+                            </div>
+                            <div class="form-floating"style="padding:10px; width:100px">
+                                <input type="number" class="form-control" id="randMaxInput" value="10">
+                                <label for="floatingInput">max</label>
+                            </div>
+                            <div class="form-floating"style="padding:10px; width:130px">
+                                <input type="number" class="form-control"  id="randOutputCount" value="10">
+                                <label for="floatingInput">output amount</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn-lg btn-primary" onclick="generateRandomNumbers()">Generate
+                                Numbers</button> 
+                            
+                        </div>
+                        <br>
+                        <p id="randomNumberDiv" style="padding:10px; width:400px; height: 300px; overflow-y:auto; background:#101010; color:#FFFFFF; font-family:'Courier New'">Click button to generate prompts</p>
+                    </div>
                     </div>
                 </div>
             </section>
